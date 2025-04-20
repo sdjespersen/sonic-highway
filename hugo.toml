@@ -9,3 +9,6 @@ theme = 'hugo-split-theme'
   enable = true
   file = "images/acapella-1.jpeg"
   position = "center center"
+
+[params.custom.css]
+  enable = true
