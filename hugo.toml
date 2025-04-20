@@ -1,0 +1,11 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'hugo-split-theme'
+
+
+[params]
+[params.visual.image]
+  enable = true
+  file = "images/acapella-1.jpeg"
+  position = "center center"
