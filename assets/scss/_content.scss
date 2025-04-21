@@ -201,6 +201,11 @@ a {
   object-fit: cover;
 }
 
+.logo {
+  width: 400px;
+  align: center;
+}
+
 @media screen and (max-width: $bp-smallish) {
   .leftcontent {
     display: block;
