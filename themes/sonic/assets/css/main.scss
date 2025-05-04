@@ -63,7 +63,7 @@
   /* Regular CSS */
   body {
     padding: 0;
-    margin: 0 4px;
+    margin: 0 8px;
     font-family: "Gotham", "Open Sans", sans-serif;
     font-size: 1.1rem;
   }
@@ -80,23 +80,14 @@
     font-size: 4rem;
   }
   h2 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
   }
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-  }
-  figure {
-    margin: 10px 30px;
-  }
-  figcaption {
     text-align: center;
   }
-  img.full-width {
-    width: 100%;
-    height: auto;
-  }
-  figure.lightbox-enabled > img {
-    cursor: zoom-in;
+  p {
+    margin: 4px 0px;
   }
 
   /* Img float hacks */
@@ -117,15 +108,18 @@
   .bios-container {
     display: grid;
     padding: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(350px, auto));
   }
 
   div.bio {
     display: block;
+    padding: 8px;
+    max-width: 350px;
   }
 
   div.bio > img {
-    max-width: 400px;
+    max-width: 350px;
+    width: 100%;
   }
 
   footer {
