@@ -1,9 +1,0 @@
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
-
-[params]
-  [params.theme_config]
-    appearance = "auto"
-    date_format = "2023-10-31"
