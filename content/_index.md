@@ -1,12 +1,8 @@
-+++
-title = "Sonic Highway"
-+++
+---
+title: Sonic Highway
+---
 
-{{< figure
-  src="/images/logo.jpeg"
-  alt="Sonic Highway: Dance While You Can"
-  class="logo"
->}}
+# Sonic Highway
 
 The perfect dance band to play at your 3rd wedding, specializing in high-energy rock/pop/funk/soul hits from the 60s,
 70s, 80s and beyond.
