@@ -1,6 +1,9 @@
 body {
     background-color: #212121;
-    color: #fafafa
+    color: #fafafa;
+}
+main {
+    max-width: 1600px;
 }
 
 body a {
