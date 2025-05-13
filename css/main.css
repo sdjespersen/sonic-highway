@@ -83,6 +83,10 @@ p {
     margin: 4px 0px
 }
 
+#song-list > ul {
+    list-style: none;
+}
+
 img[alt$=">"] {
     float: right;
     padding: 8px
