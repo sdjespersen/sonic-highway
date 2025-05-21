@@ -100,8 +100,14 @@ img[alt$="<"] {
     padding: 8px
 }
 
-img#boogie-dancers {
-    max-width: 600px
+div.reflow-img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, auto));
+}
+
+img.medium-img {
+    max-width: 600px;
+    margin: 8px;
 }
 
 img.social-icon {
