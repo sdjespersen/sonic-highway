@@ -142,3 +142,27 @@ footer {
 #song-list>ul {
     columns: 2
 }
+
+#sib-container input {
+    color: #333;
+}
+
+#sib-container input:-ms-input-placeholder {
+    text-align: left;
+    color: #7c8289;
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    color: #7c8289;
+  }
+
+  #sib-container textarea::placeholder {
+    text-align: left;
+    color: #7c8289;
+  }
+
+  #sib-container a {
+    text-decoration: underline;
+    color: #2BB2FC;
+  }
