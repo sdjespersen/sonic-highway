@@ -157,7 +157,7 @@
           </div>
           <div></div>
           <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
-            <form id="sib-form" method="POST" action="https://52551c46.sibforms.com/serve/MUIFAIyFtznAvN6BVFF-2T6edf3CvT_dT5X5lKUn9TM2QL_ThWkzyVYa4EORqiZBM_eb-nWAm9c3vbYvoUhvm4sES6DNL7Gk42noPoKGQDfeLcLsfS4t7Ko5dWLhS4hzRdGA8x_aSPx_3T9Np-7sm_2PwAGtqdS16B-Lfv-QTBFC7-KNZI5OIyoN95F7QhtzkTsgaUToPYefRqGJ" data-type="subscription">
+            <form id="sib-form" method="POST" action="https://52551c46.sibforms.com/serve/MUIFACtW__I2kUhs2BVgZ0tcVYTTt0paPCkqP9sj3823eSMdZkgVT5rRDdf0c0VTBpJa6Amg6A2nGn7mKowCLWyY67prDaZuwUKvS6Bgdwc3ZSf6Bv97s0biRZ7hYLokxNhugjIoouEcnCOTY4i8tq-YmUlhBBDcowcJoBIlUWDy6TVFZ6wytjvp9NzuyfT7UQew-2BmB3YyxLbc" data-type="subscription">
               <div style="padding: 8px 0;">
                 <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Futura, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
                   <p>Upcoming Gigs</p>
@@ -190,21 +190,7 @@
                 </div>
               </div>
               <div style="padding: 8px 0;">
-                <div class="sib-captcha sib-form-block">
-                  <div class="form__entry entry_block">
-                    <div class="form__label-row ">
-                      <script>
-                        function handleCaptchaResponse() {
-                          var event = new Event('captchaChange');
-                          document.getElementById('sib-captcha').dispatchEvent(event);
-                        }
-                      </script>
-                      <div class="g-recaptcha sib-visible-recaptcha" id="sib-captcha" data-sitekey="6LclAHgrAAAAAPNVqx5yasrk2eNRaifVoWHCm8ik" data-callback="handleCaptchaResponse" style="direction:ltr"></div>
-                    </div>
-                    <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                    </label>
-                  </div>
-                </div>
+                <div class="g-recaptcha-v3" data-sitekey="6LclAHgrAAAAAPNVqx5yasrk2eNRaifVoWHCm8ik" style="display: none"></div>
               </div>
               <div style="padding: 8px 0;">
                 <div class="sib-form-block" style="text-align: left">
@@ -256,6 +242,8 @@
     </script>
 
     <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LclAHgrAAAAAPNVqx5yasrk2eNRaifVoWHCm8ik&hl=en" async defer></script>
   </main>
 </body>
 </html>
