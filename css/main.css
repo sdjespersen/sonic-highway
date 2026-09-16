@@ -64,6 +64,10 @@ main {
     padding: 12px 0px
 }
 
+#media.iframe {
+    padding: 12px
+}
+
 h1 {
     font-size: 4rem
 }
