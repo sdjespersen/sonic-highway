@@ -1,0 +1,12 @@
+heading: Get in touch
+intro: Booking a gig, writing a review, or just saying hello? Send us a message and we'll get back to you.
+email: hello@example.com
+location: Your City, Somewhere
+socials:
+  - label: Instagram
+    url: https://instagram.com/
+  - label: YouTube
+    url: https://youtube.com/
+  - label: Bandcamp
+    url: https://bandcamp.com/
+success_message: Thanks! Your message is on its way — we'll reply soon.

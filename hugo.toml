@@ -1,0 +1,12 @@
+baseURL = 'https://sonichighway.band/'
+locale = 'en-us'
+title = 'Sonic Highway'
+disableKinds = ["taxonomy", "term", "section", "RSS", "sitemap"]
+
+relativeURLs = true
+
+# Explicitly tell Hugo to mount /static to the root of the published site
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"

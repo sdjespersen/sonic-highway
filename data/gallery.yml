@@ -1,0 +1,30 @@
+heading: On stage & off
+intro: Photos and clips from recent shows. Swipe or use the arrows.
+items:
+  - type: video
+    video_url: "https://www.youtube.com/watch?v=3eBFZyqVXdY"
+    image: /img/placeholders/gallery-2.svg
+    caption: Solano Stroll 2025
+  - type: video
+    video_url: "https://www.youtube.com/watch?v=MSeRNASWnTU?si=WmOjbY_GNsgV8ylY?rel=0"
+    image: /img/placeholders/gallery-2.svg
+    caption: 65th birthday, Portola Valley
+  - type: video
+    video_url: "https://www.youtube.com/watch?v=mvhOjW7Pplg?rel=0"
+    image: /img/placeholders/gallery-2.svg
+    caption: Solano Stroll 2026
+  - type: video
+    video_url: "https://www.youtube.com/watch?v=Ws1k173qYCY?si=rS49Wnb8Hq_KxEWh?rel=0"
+    image: /img/placeholders/gallery-2.svg
+    caption: Sausalito Seahorse, Sausalito
+  - type: video
+    video_url: "https://www.youtube.com/watch?v=lh0cF6e1Ssw?si=GMxT70byYxcNYUFx?rel=0"
+    image: /img/placeholders/gallery-2.svg
+    caption: Berkeley Art House Gallery
+  - type: video
+    video_url: "https://www.youtube.com/watch?v=YYRzOdLjsLU?si=vfE4qjxa5buazTFA?rel=0"
+    image: /img/placeholders/gallery-2.svg
+    caption: Baltic Kiss, Point Richmond
+  - type: photo
+    image: /img/placeholders/gallery-1.svg
+    caption: Placeholder — live at the Blue Room

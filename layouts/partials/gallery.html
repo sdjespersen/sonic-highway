@@ -1,0 +1,38 @@
+{{- $g := site.Data.gallery -}}
+<section class="section section--dark" id="media">
+  <div class="section__head">
+    <span class="section__num">01</span>
+    <h2>{{ $g.heading }}</h2>
+    {{- with $g.intro }}<p>{{ . }}</p>{{ end }}
+  </div>
+  <div class="carousel" data-carousel>
+    <div class="carousel__track" data-track tabindex="0" aria-label="Photos and videos">
+      {{- range $i, $item := $g.items }}
+      <figure class="slide" data-slide aria-label="Slide {{ add $i 1 }} of {{ len $g.items }}">
+        <div class="slide__media">
+          {{- $yt := "" -}}
+          {{- with $item.video_url -}}
+            {{- with findRESubmatch `(?:youtu\.be/|v=|embed/|shorts/)([A-Za-z0-9_-]{11})` . 1 -}}
+              {{- $yt = index (index . 0) 1 -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if and (eq $item.type "video") $yt }}
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ $yt }}?enablejsapi=1&rel=0" title="{{ $item.caption | default "Video" }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          {{- else if and (eq $item.type "video") $item.video_file }}
+          <video src="{{ $item.video_file }}" {{ with $item.image }}poster="{{ partial "img.html" (dict "src" . "w" 1600) }}"{{ end }} controls preload="none" playsinline></video>
+          {{- else }}
+          <img src="{{ partial "img.html" (dict "src" $item.image "w" 1600) }}" alt="{{ $item.caption }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+          {{- if eq $item.type "video" }}<span class="slide__play" aria-hidden="true">&#9654;</span>{{ end }}
+          {{- end }}
+        </div>
+        {{- with $item.caption }}<figcaption><span class="slide__type">{{ $item.type | default "photo" }}</span>{{ . }}</figcaption>{{ end }}
+      </figure>
+      {{- end }}
+    </div>
+    <div class="carousel__controls">
+      <button class="carousel__btn" type="button" data-prev aria-label="Previous slide">&larr;</button>
+      <div class="carousel__dots" data-dots></div>
+      <button class="carousel__btn" type="button" data-next aria-label="Next slide">&rarr;</button>
+    </div>
+  </div>
+</section>

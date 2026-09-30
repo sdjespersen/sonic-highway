@@ -1,0 +1,36 @@
+heading: The band
+intro: The people making the noise.
+members:
+  - name: Kathy Kennedy
+    role: Lead vocals
+    photo: /img/kathy.jpg
+    bio: Kathy Kennedy has performed before thousands at concerts around the world. A lead and backup singer for over 25 years in Big Bang Beat she has also performed with Mickey Thomas' Starship, Ronnie Spector, and Bonnie Raitt. [www.kathykennedyvoicestudio.com](https://www.kathykennedyvoicestudio.com)
+  - name: Ian Willson
+    photo: /img/ian.jpg
+    role: sax, keyboards, vocals
+    bio: Ian studied sax with jazz legend Joe Henderson and has played in various bands since 1975, including Pride & Joy, Soul Power, Ed Kelly, Frank Martin, Bobby Freeman, Brenda Vaughn, Napata Mero, Gwen Majors, Stephanie Teel, the Toasters, Prime Time, Counterpoint, Pure Pleasure, Midnight Taxi, Shake, Little Sister, and the Hollywood Swingers.
+
+  - name: Scott Willson
+    photo: /img/scottw.jpg
+    role: bass, vocals
+    bio: Performed over 2000 weddings and parties around the SF bay area, with Bobby "the Swim" Freeman, Soul Power, and others.
+
+  - name: Scott Jespersen
+    photo: /img/scottj.jpg
+    role: keyboards, vocals
+    bio: Multi-instrumental musician extraordinaire, jazz band leader, choir director. Sings like Michael Jackson.
+
+  - name: Schatzie Frisch
+    photo: /img/schatzie.jpg
+    role: vocals, bongos
+    bio: Schatzie the Renegade Deli Heiress plays with "Rodney's Bubble Machine", a ukulele band, and performs with the Alex Carlin Tribe (when Alex is not in Siberia). She also sings with The Faves, a band featuring Larry Lynch (drummer for Greg Kihn). Schatzie was honored to perform with Berkeley legendary band Psycotic Pineapple and is in their OneMic video, "Headcheese"*. When Schatzie is not dancin' or singin', she is creating Headcheese Art.  *Headcheese is a cold cut that originated in Europe. Headcheese is not a dairy cheese. There is no cheese involved.  <a href="https://www.schatziefrisch.com/">www.schatziefrisch.com</a>
+
+  - name: David Ratoosh
+    photo: /img/david.jpg
+    role: lead guitar
+    bio: Local boy David has been tearing it up in numerous Bay Area bands forever.
+
+  - name: Dylan Damonte
+    photo: /img/dylan.jpg
+    role: drums
+    bio: Keeps that beat! Pop, dance, gospel, & jazz.

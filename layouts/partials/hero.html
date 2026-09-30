@@ -1,0 +1,15 @@
+{{- $hero := site.Data.hero -}}
+<section class="hero" id="top">
+  {{- with $hero.background }}
+  <img class="hero__bg" src="{{ $hero.background }}" alt="" fetchpriority="high">
+  <!-- <img class="hero__bg" src="{{ partial "img.html" (dict "src" . "w" 1920) }}" alt="" fetchpriority="high"> -->
+  {{- end }}
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="kicker">Live &middot; Loud &middot; Local</p>
+    <h1 class="hero__title">{{ $hero.band_name }}</h1>
+    {{- with $hero.tagline }}<p class="hero__tagline">{{ . }}</p>{{ end }}
+    <a class="btn" href="#contact">{{ $hero.button_label | default "Get in touch" }}</a>
+  </div>
+  <a class="hero__scroll" href="#media" aria-label="Scroll to media">&darr;</a>
+</section>

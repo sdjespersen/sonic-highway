@@ -1,0 +1,7 @@
+{{- /* Returns an optimized URL for an image path. Raster uploads go through the Netlify Image CDN; SVGs and external URLs pass through. Usage: partial "img.html" (dict "src" "/img/x.jpg" "w" 800) */ -}}
+{{- $src := .src | default "" -}}
+{{- $url := $src -}}
+{{- if and $src (not (strings.HasSuffix (lower $src) ".svg")) (not (strings.HasPrefix $src "http")) -}}
+  {{- $url = printf "/.netlify/images?url=%s&w=%d&fm=webp" $src .w -}}
+{{- end -}}
+{{- return $url -}}

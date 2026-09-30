@@ -1,0 +1,16 @@
+{{- $s := site.Data.songs -}}
+<section class="section" id="songs">
+  <div class="section__head">
+    <span class="section__num">02</span>
+    <h2>{{ $s.heading }}</h2>
+  </div>
+  <ol class="setlist">
+    {{- range $i, $song := $s.songs }}
+    <li class="setlist__row">
+      <span class="setlist__num">{{ printf "%02d" (add $i 1) }}</span>
+      <span class="setlist__title">{{ $song.title }}</span>
+      <span class="setlist__artist">{{ $song.artist }}</span>
+    </li>
+    {{- end }}
+  </ol>
+</section>

@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  repo: sdjespersen/sonic-highway  # Replace with your GitHub username and repository name
+  branch: gh-pages                # Or your default branch name (e.g., gh-pages or master)
+  base_url: https://api.decapcms.org
+
+# Hugo copies contents of /static to / at build time
+media_folder: "static/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  # ----------------------------------------------------
+  # 1. Band News & Tour/Gig Announcements
+  # ----------------------------------------------------
+  - name: "posts"
+    label: "News & Gig Announcements"
+    folder: "_posts"  # Folder where blog posts/updates will be saved
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Body Text", name: "body", widget: "markdown" }
+
+  # ----------------------------------------------------
+  # 2. Photo Carousel / Gallery Configuration
+  # ----------------------------------------------------
+  - name: "gallery"
+    label: "Photo Gallery / Carousel"
+    files:
+      - file: "_data/carousel.json"
+        label: "Homepage Carousel Images"
+        name: "carousel"
+        fields:
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            field:
+              label: "Slide Item"
+              name: "slide"
+              widget: "object"
+              fields:
+                - { label: "Image", name: "image", widget: "image" }
+                - { label: "Caption / Alt Text", name: "caption", widget: "string", required: false }
+
+  # ----------------------------------------------------
+  # 3. Embedded Live Performance Videos
+  # ----------------------------------------------------
+  - name: "videos"
+    label: "Featured Videos"
+    files:
+      - file: "_data/videos.json"
+        label: "Embedded Video Links"
+        name: "videos_list"
+        fields:
+          - label: "Video Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Video Title", name: "title", widget: "string" }
+              - { label: "YouTube or Vimeo URL", name: "url", widget: "string", hint: "e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+              - { label: "Description / Venue Info", name: "description", widget: "text", required: false }

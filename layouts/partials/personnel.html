@@ -1,0 +1,21 @@
+{{- $p := site.Data.personnel -}}
+<section class="section section--paper" id="band">
+  <div class="section__head">
+    <span class="section__num">03</span>
+    <h2>{{ $p.heading }}</h2>
+    {{- with $p.intro }}<p>{{ . }}</p>{{ end }}
+  </div>
+  <ul class="members">
+    {{- range $p.members }}
+    <li class="member">
+      <div class="member__photo">
+        <img src="{{ .photo }}" alt="{{ $p.name }}" loading="lazy">
+        <!-- {{- with .photo }}<img src="{{ partial "img.html" (dict "src" . "w" 600) }}" alt="" loading="lazy">{{ end }} -->
+      </div>
+      <h3 class="member__name">{{ .name }}</h3>
+      <p class="member__role">{{ .role }}</p>
+      {{- with .bio }}<p class="member__bio">{{ . }}</p>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</section>

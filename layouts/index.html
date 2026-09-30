@@ -1,0 +1,49 @@
+{{- $hero := site.Data.hero -}}
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+{{- $js := resources.Get "js/main.js" | js.Build (dict "minify" true "target" "es2019") | fingerprint -}}
+{{- $identity := resources.Get "js/identity.js" | js.Build (dict "minify" true "target" "es2019") | fingerprint -}}
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ $hero.band_name }}</title>
+  <meta name="description" content="{{ $hero.tagline }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Karla:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <script>
+    // Invite, password-reset and confirmation links from Netlify Identity land here.
+    if (/(invite|recovery|confirmation|email_change)_token=/.test(location.hash)) {
+      var s = document.createElement('script');
+      s.src = '{{ $identity.RelPermalink }}';
+      s.defer = true;
+      document.head.appendChild(s);
+    }
+  </script>
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="topbar__brand" href="#top">{{ $hero.band_name }}</a>
+    <nav class="topbar__nav" aria-label="Sections">
+      <a href="#media">Media</a>
+      <a href="#songs">Songs</a>
+      <a href="#band">Band</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    {{ partial "hero.html" . }}
+    {{ partial "gallery.html" . }}
+    {{ partial "songs.html" . }}
+    {{ partial "personnel.html" . }}
+    {{ partial "contact.html" . }}
+  </main>
+  <footer class="footer">
+    <span>&copy; {{ now.Year }} {{ $hero.band_name }}</span>
+    <a href="/admin/">Band login</a>
+  </footer>
+</body>
+</html>
